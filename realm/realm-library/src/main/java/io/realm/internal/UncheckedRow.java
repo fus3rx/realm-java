@@ -189,7 +189,7 @@ public class UncheckedRow implements NativeObject, Row {
 
     @Override
     public TableView getBacklinkView(Table srcTable, long srcColumnIndex) {
-        long backlinkViewPtr = nativeGetBacklinkView(nativePtr, srcTable.nativePtr, srcColumnIndex);
+        long backlinkViewPtr = nativeGetBacklinkView(nativePtr, srcTable.getNativePtr(), srcColumnIndex);
         return new TableView(context, getTable(), backlinkViewPtr);
     }
 
